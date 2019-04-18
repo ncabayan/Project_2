@@ -29,7 +29,7 @@ def twitch_data():
 
     data = {}
     for i in df.columns:
-        data[i] = df.loc[i].values.tolist()
+        data[i] = df[i].values.tolist()
 
     return jsonify(data)
 

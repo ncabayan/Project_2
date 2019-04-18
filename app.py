@@ -1,3 +1,4 @@
+import json
 import os
 
 import pandas as pd
@@ -27,11 +28,11 @@ def twitch_data():
 
     df = pd.read_sql('select * from twitch_overall',engine)
 
-    data = {}
-    for i in df.columns:
-        data[i] = df[i].values.tolist()
+    #data = {}
+    #for i in df.columns:
+    #    data[i] = df[i].values.tolist()
 
-    return jsonify(data)
+    return jsonify(json.loads(df.to_json(orient='records')))
 
 if __name__ == '__main__':
     app.run(debug=True)

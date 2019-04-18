@@ -22,7 +22,13 @@
       <div class="col-md-2">
         <div class="well">
           <h5>Select Streamer:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <select id="selDataset" onchange="optionChanged(this.value)">
+            <option value="Ninja">Ninja</option>
+            <option value="Tfue">Tfue</option>
+            <option value="Shroud">Shroud</option>
+            <option value="Riot Games">Riot Games</option>
+            <option value="Summit1g">Summit1g</option>
+          </select>
         </div>
       </div>
       <div class="col-md-5">
@@ -39,9 +45,9 @@
   <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
+  <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script> -->
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-
+  <script src="../static/js/app.js"></script>
 </body>
 
 </html>

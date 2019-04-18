@@ -23,7 +23,7 @@ def index():
 
 @app.route('/twitch_data')
 def twitch_data():
-    connection_string = 'mysql+pymysql://root:1065Delta@localhost/twitch_db'
+    connection_string = 'mysql+pymysql://root:Ancestorcool123@localhost/twitch_db'
     engine = create_engine(connection_string)
 
     df = pd.read_sql('select * from twitch_overall',engine)
